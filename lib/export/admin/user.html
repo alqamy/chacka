@@ -1,0 +1,14 @@
+	{% extends 'layout.html' %}
+
+{% block content %}
+	<div class='card user'>
+		<img  src="/admin/img/photo.png" alt="">
+		<h2>{{user.name}}</h2>
+		<p class='uname'>({{user.username}})</p>
+		<p class='email'>{{user.email}}</p>
+		<div class='opt'>
+			<a href='/admin/edit/{{post.id}}'><i class="fa fa-edit"></i> Edit Account</a>
+			<a href='/admin/edit/{{post.id}}'><i class="fa fa-sign-out"></i> Sign Out</a>
+		</div>
+	</div>
+{% endblock %}

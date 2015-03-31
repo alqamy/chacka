@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Create new site</h2>
+
+		<form class='' action='/installation?step=1' method='post' id='install-form'>
+			{% if err %}
+				<p class='error'> {{err.message}}</p>
+			{% else %}
+				<p >Put the information regarding the MongoDB connection</p>
+			{% endif %}
+			<input type='text' placeholder='Host' name='host' value='{{data.host}}'>
+			<input type='text' placeholder='Database Name' name='db' value='{{data.db}}'>
+			<input type='text' placeholder='Site Name' name='site' value='{{data.site}}'>
+			<input type='text' placeholder='Email' name='email' value='{{data.email}}'>
+			
+			<input type='text' placeholder='Contact Name' name='name' value='{{data.name}}'>
+			<input type='text' placeholder='User Name' name='uname' value='{{data.uname}}'>
+			<input type='password' placeholder='Password' name='password' value='{{data.password}}'>
+			
+			<a href="javascript:document.getElementById('install-form').submit()" class='btn'>Create a new site</a>
+		</form>

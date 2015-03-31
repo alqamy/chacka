@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Create new site</h2>
+
+		<form class='' action='/installation/step1' method='post'>
+			{% if err %}
+				<p class='error'> err.message</p>
+			{% else %}
+				<p >Put the information regarding the MongoDB connection</p>
+			{% endif %}
+			<input type='' placeholder='Host' name='host'>
+			<input type='' placeholder='Database Name' name='db'>
+			<input type='submit' value='Create a new site' class='btn'/>
+		</form>

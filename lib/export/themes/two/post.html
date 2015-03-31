@@ -1,0 +1,30 @@
+	{% extends 'layout.html' %}
+
+{% block content %}
+	<div class='content'>
+					<article class="post on">
+						<header class="post-header">
+							<h2><a href="/{post.name}}">{{post.title}}</a></h2>
+								
+								<section class="meta">
+								<img class="author-img full-img" src="/content/images/2013/Nov/gravatar_j7_200.jpg" alt="Author image">
+								<span class="author-name">John O'Nolan</span>
+							•
+							<time datetime="2014-05-13">13 May 2014</time>
+							<span class="tags">• Subject: <a href="/tag/new-hires/">New Hires</a></span>
+							</section>
+
+						</header>
+						<section class="post-excerpt">
+							{{post.content | safe}}
+						</section>
+						<footer class="more-links">
+						
+						<div class="right">
+
+						</div>
+						</footer>
+						</article>
+				</div>
+
+					{% endblock %}

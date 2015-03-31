@@ -1,0 +1,95 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class='dash_heading'>
+	<h1>{{_site.name}}</h1>
+</div>
+<div class='clock'>
+	<h3 id='time'>3:26</h3>
+</div>
+
+
+
+<div class='top_wrp'>
+	
+	<div class='card'>
+		<p>{{visits||0}}</p>
+		<span>Visitors</span>
+	</div>
+	
+	<div class='card'>
+		<p>{{postCount||0}}</p>
+		<span>Posts</span>
+	</div>
+
+
+	<div class='card'>
+		<p>{{categoryCount||0}}</p>
+		<span>Categories</span>
+	</div>
+
+
+	<div class='card'>
+		<p>{{userCount||0}}</p>
+		<span>Users</span>
+	</div>
+
+
+</div>
+<div class='links'>
+	<ul> 
+		<li>
+			<a href=''>
+				<i class="fa fa-plus"></i>
+				Add New Post
+			</a>
+		</li>
+		<li>
+			<a href=''>
+				<i class="fa fa-list"></i>
+				List of Post
+			</a>
+		</li>
+		<li>
+			<a href=''>
+				<i class="fa fa-eye"></i>
+				Visit the site
+			</a>
+		</li>
+	</ul>
+</div>
+
+
+
+<script type="text/javascript">
+function clock(){
+	var clockObj= document.getElementById("time");
+	var hours=new Date().getHours()
+	var minutes=new Date().getMinutes()
+	var seconds=new Date().getSeconds()
+	var dn="AM"
+	if (hours==12) {
+		dn="PM"
+	}
+	if (hours>12){
+		dn="PM"
+		hours=hours-12
+	}
+	if (hours==0){
+		 hours=12
+	}
+	if (hours.toString().length==1){
+		hours="0"+hours
+	}
+
+	if (minutes<=9){
+		minutes="0"+minutes
+	}
+
+	clockObj.innerHTML=hours+":"+minutes+":"+seconds+'<span>'+dn+'</span>'
+
+}
+setInterval("clock()",1000)
+
+window.onload=clock
+</script>

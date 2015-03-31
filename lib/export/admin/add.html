@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+	<script type="text/javascript" src='/admin/tinymce/tinymce.min.js'></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			tinymce.init({
+			selector: ".editor_content"
+			});
+		})
+	</script>
+
+		<form class='editor' id='editor' method='post'>
+			<input type='text' name='title' id='editor_title' class='{% if err.type=='title' %}err{% endif %} title' placeholder='Title' >
+				{% if err.type=='title' %}
+					<p class='err'>provide a name</p>
+				{% endif %}
+			<div class='wrp1 group'>
+				
+				<div class='panel'>
+					<ul>
+						<li>
+							<a href=''><i class="fa fa-calendar"></i></a>	
+						</li>
+						<li>
+							<a href=''>p</a>	
+						</li>
+					</ul>
+
+					<textarea class='editor_content' name='content' value=''></textarea>
+
+				</div>
+			</div>
+			<div class='wrp2 group'>
+				<ul>
+					<li class='active'>
+						<a href='' class='activator'><h3>Category</h3></a>
+						<div class='details '>
+							<select class='category' name='category'>
+								{% for term in terms %}
+								<option value='{{term.name}}'>{{term.name}}</option>
+								{% endfor %}
+								<option value='add_new_cat'>Add New</option>
+							</select>
+							<input type='text' class='new_cat' name='add_new_cat' placeholder='Type New catagory here'>
+						</div>
+					</li>
+					<li class='active'>
+						<a href='' class='activator'><h3>Labels</h3></a>
+						<div class='details '>
+							<input type='' placeholder='Type labels here'></input>
+							<p>Insert comma after each labels</p>
+						</div>
+					</li>
+					<li class=''>
+						<a href='' class='activator'><h3>permlinks</h3></a>
+						<div class='details '>
+							<textarea class='terms'></textarea>
+							<p>Insert comma after each labels</p>
+						</div>
+					</li>
+					<li class=''>
+						<a href='' class='activator'><h3>Options</h3></a>
+						<div class='details '>
+							<textarea class='terms'></textarea>
+							<p>Insert comma after each labels</p>
+						</div>
+					</li>
+				</ul>
+				<div class='btn_grp'>
+					<a class='btn' href="javascript:document.getElementById('editor').submit()">submit</a>
+					<a href="" class='btn'>cancel</a>
+				</div>
+			</div>
+
+		</form>
+{% endblock %}

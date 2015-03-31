@@ -1,0 +1,94 @@
+*{
+	margin: 0;
+	border: 0;
+	outline: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header,footer,main{
+	display: block;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #fff;
+  background-color: #333;
+}
+
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a {
+  color: #428bca;
+  text-decoration: none;
+}
+
+
+main{
+}
+
+.content{
+	display:block;
+	width:100%;
+}
+
+.login{
+  width: 313px;
+  margin: 0 auto;
+  margin-top: 18%;
+}
+.login p{
+  margin-top:20px;
+  overflow:hidden;
+}
+.login input{
+width: 100%;
+padding: 8px 12px;
+border: 1px solid #AFB1B1;
+color: #333
+}
+
+.btn{
+ padding: 9px 24px;
+font-size: 13px;
+display: inline-block;
+background: #000;
+color: #fff;
+text-transform: uppercase;
+float: right;
+}
+
+.logo h1{
+background-image: url('/admin/img/alqamyWhite.png');
+background-repeat: no-repeat;
+overflow: hidden;
+display: block;
+background-size: contain;
+width: 60px;
+height: 50;
+text-indent: -999999;
+margin: 20PX auto;
+}
+.login h2{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.login input:focus{
+  border:1px solid #08f;
+}

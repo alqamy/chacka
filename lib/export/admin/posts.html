@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class='list'>
+	<h2>Contents</h2>
+	<ul>
+	{% if !posts %}
+			No posts
+		{% else %}
+		{% for post in posts %}
+		<li>
+			<a href=""><h3>{{post.title}}</h3></a>
+			<div>
+				<span class='date'>thirty minute before</span>
+				<div class='right'>
+					<span >admin</span>,
+					<span >under this category</span>,
+				</div>
+				
+			</div>
+			<div class='top'>
+				<a href='/admin/edit/{{post.id}}'><i class="fa fa-edit"></i></a>
+				<a href="javascript:deleteConfirm('{{post.id}}')"><i class="fa fa-trash-o"></i></a>
+			</div>
+		</li>
+		{% endfor %}
+	{% endif %}
+	</ul>
+</div>
+<script type="text/javascript">
+	function deleteConfirm(id){
+		if(confirm('The Post will be delelted,continue?')){
+			location.href='/admin/post/delete/'+id;
+		}
+	}
+</script>
+
+{% endblock %}

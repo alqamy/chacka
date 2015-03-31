@@ -1,0 +1,19 @@
+{% extends 'layout_base.html' %}{% block content %}
+<div class='login'>
+	<form action='/admin/login?backto={{backto}}' method='post' id='login'>
+			<a class='logo'><h1>Alqamy</h1></a>
+			<h2>Login</h2>
+			<p>
+				<input type='text' placeholder='username or email' name='uname'>
+			</p>
+			<p>
+				<input type='password' placeholder='password' name='password'>
+			</p>
+			{% if err %}
+				<p class='info'>{{err.message}}</p>
+			{% endif %}
+			<p>
+				<a href="javascript:document.getElementById('login').submit()" class='btn'>login</a>
+			</p>
+	</form>
+</div>

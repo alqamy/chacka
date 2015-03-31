@@ -1,0 +1,41 @@
+
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class='list themes'>
+	<h2>Contents</h2>
+	<ul>
+	{% if !themes %}
+			No themes
+		{% else %}
+		{%for theme in themes%}
+		<li>
+			<a href=""><h3>{{theme.name}}</h3></a>
+			<div>
+				<p class='description'>{{theme.description}}</p>				
+			</div>
+			{% if !theme.active %}
+				<a href="/admin/theme/activate/{{theme.folder||'two'}}" class='btn activator'>
+					<i class="fa fa-magic"></i>
+					Activate
+				</a>
+			{% else %}
+				<a href="" class='btn activator active'>
+					<i class="fa fa-magic"></i>
+					Activated
+				</a>
+			{% endif %}
+		</li>
+		{% endfor %}
+	{% endif %}
+	</ul>
+</div>
+<script type="text/javascript">
+	function deleteConfirm(id){
+		if(confirm('The Post will be delelted,continue?')){
+			location.href='/admin/post/delete/'+id;
+		}
+	}
+</script>
+
+{% endblock %}

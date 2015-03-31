@@ -1,0 +1,66 @@
+*{
+	margin: 0;
+	border: 0;
+	padding: 0;
+	outline: 0;
+}
+
+body{
+	background: #eee;
+	color: #bbb;
+	font-family: "Open Sans", sans-serif;
+}
+main{
+	display: block
+}
+
+.logo h1{
+background-image: url('/install/images/alqamy.png');
+background-repeat: no-repeat;
+overflow: hidden;
+display: block;
+background-size: contain;
+width: 70px;
+height: 70px;
+text-indent: -999999;
+margin: 10px auto 0;
+}
+
+.content{
+	background: #333;
+	padding: 1em 2em;
+	max-width: 320px;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.13);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.13);
+	margin: 0 auto;
+	display: block;
+	overflow: hidden
+}
+
+.content h2{
+	text-align: center;
+	padding: .5em 0;
+}
+
+.btn{
+ padding: 9px 24px;
+font-size: 13px;
+display: inline-block;
+background: #000;
+color: #fff;
+text-transform: uppercase;
+float: right;
+text-decoration: none;
+}
+
+
+input{
+width: 100%;
+padding: 8px 12px;
+color: #333;
+margin: 4px 0;
+}
+
+.error{
+	color: #D68900;
+}

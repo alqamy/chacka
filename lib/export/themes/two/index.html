@@ -1,0 +1,32 @@
+	{% extends 'layout.html' %}
+
+{% block content %}
+	<div class='content'>
+					{% for post in posts %}
+					<article class="post tag-new-hires">
+						<header class="post-header">
+							<h2><a href="/{{post.name}}">{{post.title}}</a></h2>
+								
+								<section class="meta">
+								<img class="auther-img" src="/img/photo.png" alt="Author image">
+								<span class="author-name">John O'Nolan</span>
+							•
+							<time>{{post.created}}</time>
+							<span class="tags">• Subject: <a href="/tag/new-hires/">New Hires</a></span>
+							</section>
+
+						</header>
+						<section class="post-excerpt">
+							{{post.content | safe}}
+						</section>
+						<footer class="more-links">
+						<a class="read-more button-save" href="/{{post.name}}/">Read More</a>
+						<div class="right">
+
+						</div>
+						</footer>
+						</article>
+					{% endfor %}
+				</div>
+
+					{% endblock %}

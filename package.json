@@ -1,0 +1,52 @@
+{
+  "name": "chacka",
+  "description": "Just another blogging templtes",
+  "auther": {
+    "name": "badhar",
+    "email": "msbadar@gmail.com"
+  },
+  "version": "0.0.8",
+  "private": false,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alqamy/chacka.git"
+  },
+  "dependencies": {
+    "fs.extra": "*",
+    "mongoose": "*",
+    "swig": "*",
+    "sequence": "*",
+    "colors": "*"
+  },
+  "keywords": [
+    "chacka",
+    "alqamy",
+    "cms",
+    "contnet management system",
+    "blog",
+    "web"
+  ],
+  "main": "index",
+  "bin": {
+    "express": "./bin/alqamy"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/alqamy/chacka",
+  "bugs": {
+    "url": "https://github.com/alqamy/chacka/issues"
+  },
+  "readme": "# Chacka\r\n Content Management System using **nodejs** and **mongodb**\r\n\r\n![693](https://cloud.githubusercontent.com/assets/6148982/3945885/e8b05c86-2654-11e4-84dc-da9c2c7da6ac.jpg)\r\n\r\n\r\n\r\n## Pre Requirement\r\n* NodeJs\r\n* MongoDB\r\n\r\n\r\n## Installation\r\n```\r\n  npm install -g chacka\r\n```\r\n\r\n\r\n## Running\r\n\r\n```\r\nchacka folder-name\r\n```\r\n\r\n",
+  "readmeFilename": "README.md",
+  "_id": "chacka@0.0.8",
+  "dist": {
+    "shasum": "9f76fb444c184fb61b9b80d3b56f37de90a468a6"
+  },
+  "_from": "chacka@",
+  "_resolved": "https://registry.npmjs.org/chacka/-/chacka-0.0.8.tgz"
+}

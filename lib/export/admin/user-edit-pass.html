@@ -1,0 +1,13 @@
+	{% extends 'layout.html' %}
+
+{% block content %}
+	<div class='card user edit-name'>
+		<img  src="/admin/img/photo.png" alt="">
+		<form action='/admin/user/edit/name' id='form' method='post'>
+			<input type='text' value='{{user.name}}' name='username'>
+			<input type='text' value='{{user.name}}' name='pass1' placeholder='Old Password'>
+			<input type='text' value='{{user.name}}' name='pass2'>
+		</form>
+		<a class='btn type2' href="javascript:document.getElementById('form').submit()">Change Password</a>
+	</div>
+{% endblock %}

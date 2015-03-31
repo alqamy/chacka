@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>{{title}}</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class='wrapper'>
+			<header class='global'>
+				<a class='logo'><h1>Alqamy</h1></a>
+				<p class='description'>all things are gold</p>
+				<nav>
+					<ul>
+						<li>
+							<a href='/'>Home</a>
+						</li>
+						<li>
+							<a href='/'>Categories</a>
+						</li>
+						<li>
+							<a href='/'>Tags</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<div class='main'>
+				{% block content %}
+				{% endblock %}
+
+			
+			</div>
+			<footer class='footer'>
+			</footer>
+		</div>
+		
+			
+			
+		
+	</body>
+</html>

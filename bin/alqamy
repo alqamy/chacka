@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+var cluster = require('cluster');
+var port=80;
+if (cluster.isMaster) {
+	cluster.fork();
+	cluster.on('disconnect', function(worker) {
+		console.error('disconnect!');
+		cluster.fork();
+		port=parseInt(process.argv[2]||80)
+	});
+}else{
+	require('../app')(port)
+}
